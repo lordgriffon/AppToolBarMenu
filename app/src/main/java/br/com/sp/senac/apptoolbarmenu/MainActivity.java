@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("App Toobar Menu");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
