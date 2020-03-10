@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppToolBarMenu</string>
+    <string name="salvar">Salvar</string>
+    <string name="alterar">Alterar</string>
+    <string name="excluir">Excluir</string>
+    <string name="buscar">Buscar</string>
+    <string name="sair">Sair</string>
+</resources>
