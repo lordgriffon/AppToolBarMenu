@@ -4,58 +4,45 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class SubMenu_Activity extends AppCompatActivity {
 
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sub_menu_layout);
 
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("App Toobar Menu");
+        getSupportActionBar().setTitle("App Toobar Submenu Menu");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu_toolbar, menu);
-        return super.onCreateOptionsMenu(menu);
+        menuInflater.inflate(R.menu.submenu, menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId()) {
-            case R.id.mSalvar:
+            case R.id.mSubSalvar:
                 Toast.makeText(getApplicationContext(), "Cliquei no Salvar", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.mAlterar:
-                Toast.makeText(getApplicationContext(), "Cliquei no Alterar", Toast.LENGTH_SHORT).show();
+            case R.id.mSubSalvarComo:
+                Toast.makeText(getApplicationContext(), "Cliquei no Salvar como", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.mExcluir:
-                Toast.makeText(getApplicationContext(), "Cliquei no Excluir", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.mBuscar:
-                Toast.makeText(getApplicationContext(), "Cliquei no Buscar", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.mAbrir:
-                startActivity(new Intent(getApplicationContext(), SubMenu_Activity.class));
-                break;
-            case R.id.mAbrirGP:
-                startActivity(new Intent(getApplicationContext(), Grupo_Activity.class));
-                break;
-            case R.id.mSair:
+            case R.id.mSubFechar:
                 finish();
                 break;
         }

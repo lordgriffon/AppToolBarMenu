@@ -18,6 +18,16 @@
         android:title="@string/excluir"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/mAbrir"
+        android:icon="@drawable/ic_open"
+        android:title="@string/abrir"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mAbrirGP"
+        android:icon="@drawable/ic_open"
+        android:title="@string/abrir_grupo"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/mBuscar"
         android:icon="@drawable/ic_search"
         android:title="@string/buscar"
